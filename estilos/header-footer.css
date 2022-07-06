@@ -1,0 +1,418 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.disclaimer {
+    display:none;
+}
+#logo {
+  max-width: 300px;
+  height: 60px;
+}
+.mainmenubtn {
+    background-color: rgb(0, 110, 255);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding:20px;
+    margin-top:-2px;
+    padding: 7px 19px 7px 19px;
+    background-color: rgb(0, 110, 255);
+    border-radius: 10px;
+    transition: 0.2s;
+    }
+    .mainmenubtn:hover {
+        background-color: rgb(8, 37, 76);
+        }
+    .dropdown {
+        position: absolute;
+        display: inline-block;
+        margin-left: 550px;
+        margin-top: -5px;
+    }
+    .dropdown-child {
+        display: none;
+        background-color: rgb(0, 110, 255);
+        min-width: 200px;
+    }
+    .dropdown-child a {
+        color: white;
+        padding: 20px;
+        text-decoration: none;
+        display: block;
+    }
+    .dropdown:hover .dropdown-child {
+        display: block;
+    }
+.header {
+    display: flex;
+    height: 80px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    font-weight: bold;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #024873;
+    z-index:999;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3), 0 8px 22px 0 rgba(0, 0, 0, 0.2);
+}
+
+#menu {
+  display: flex;
+  list-style: none;
+  gap: 0.5rem;
+}
+
+#menu a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 10px;
+  font-size: 14px;
+  margin: 5px;
+}
+
+#menu ul{
+    padding: 20px;
+}
+#itens {
+    padding: 7px 12px 7px 12px;
+    transition: 0.5s;
+    opacity: 0.75;
+    
+}
+
+#itens:hover {
+    border-width: thin;
+    border-bottom: 1px solid;
+    opacity: 1;
+}
+#login{
+    padding: 7px 19px 7px 19px;
+    background-color: rgb(0, 110, 255);
+    border-radius: 10px;
+    transition: 1s;
+}
+#login:hover {
+    background-color: rgb(8, 37, 76);
+}
+#deslogar{
+    padding: 7px 19px 7px 19px;
+    background-color: rgb(0, 110, 255);
+    border-radius: 10px;
+    transition: 1s;
+}
+#deslogar:hover {
+    background-color: rgb(8, 37, 76);
+}
+
+#btn-mobile {
+  display: none;
+}
+
+/* Modal */
+.caixa {
+        top: 50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+	    position: fixed;
+  	    width: 0px;
+    	height: 0px;
+    	background:#024873 ;
+    	border-radius: 25px;
+    	display: flex;
+    	justify-content: center;
+   	    text-align: center;
+    	align-items: center;
+    	transition: 0.5s;
+    	transition-delay:0.5s;
+}
+
+.caixa.active{
+    box-shadow: 0px 0px 0px 1000px rgba(0,0,0,.8); 
+    width: 0px;
+    height: 0px;
+    
+}
+
+.caixa.active{
+    padding:50px;
+    width: 400px;
+    height: 400px;
+    transition-delay: 0.5s;
+}
+.fullcaixa {
+    position:fixed;
+}
+.caixa.active ~ .fullcaixa {
+    background:rgba(0,0,0,.6);
+}
+.caixa::before {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    width: 40px;
+    height: 40PX;
+    background: #040305;
+    border-radius: 5px;
+    transform: rotate(45deg);
+    opacity: 0;
+    transition:0.2s;
+}
+
+.caixa.active::before {
+	opacity: 1;
+	transition-delay: 0.5s;
+}
+.togglebutton {
+        font-family: 'Anek Malayalam', arial;
+    	min-width: 60px;
+    	height: 60px;
+    	
+    	border-radius: 50%;
+    	cursor: pointer;
+    	display: flex;
+    	justify-content: center;
+    	align-items: center;
+    	transition: 0.5s;
+    	color: #063666;
+}
+
+.togglebutton:hover {
+    color: #000;;
+    transition: 0.5s;
+}
+
+.togglebutton ::before{
+    font-size: 2.5em;
+    color: #fff;
+    transition: 0.5s;
+    opacity:0;
+}
+
+.caixa.active::before{
+    opacity:1;
+}
+
+.togglebutton:hover::before {
+	color:white;
+	transition:0.5s;
+
+}
+
+.caixa .conteudo {
+    min-width: 400px;
+    padding:40px;
+    transform: scale(0);
+    transition: 0.5s;
+    transition-delay: 0.5s;
+    opacity:0;
+}
+
+.caixa.active .conteudo{
+    opacity:1;
+    transform: scale(1);
+    transition-delay: 0.8s;
+}
+.caixa .conteudo h2 {
+    padding-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.caixa .conteudo p {
+    font-weight: bold;
+    font-family: Helvetica;
+    color:#fff;
+}
+/* Modal - Equipe */
+.caixa-2 {
+        top: 50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+	    position: fixed;
+  	    width: 0px;
+    	height: 0px;
+    	background:#024873 ;
+    	border-radius: 25px;
+    	display: flex;
+    	justify-content: center;
+   	    text-align: center;
+    	align-items: center;
+    	transition: 0.5s;
+    	transition-delay:0.5s;
+}
+
+.caixa-2.active{
+    box-shadow: 0px 0px 0px 1000px rgba(0,0,0,.8); 
+    width: 0px;
+    height: 0px;
+    
+}
+
+.caixa-2.active{
+    padding:50px;
+    width: 400px;
+    height: 400px;
+    transition-delay: 0.5s;
+}
+.caixa-2.active ~ .fullcaixa {
+    background:rgba(0,0,0,.6);
+}
+.caixa-2::before {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    width: 40px;
+    height: 40PX;
+    background: #040305;
+    border-radius: 5px;
+    transform: rotate(45deg);
+    opacity: 0;
+    transition:0.2s;
+}
+
+.caixa-2.active::before {
+	opacity: 1;
+	transition-delay: 0.5s;
+}
+.togglebutton-2 {
+        font-family: 'Anek Malayalam', arial;
+    	min-width: 60px;
+    	height: 60px;
+    	
+    	border-radius: 50%;
+    	cursor: pointer;
+    	display: flex;
+    	justify-content: center;
+    	align-items: center;
+    	transition: 0.5s;
+    	color: #063666;
+}
+
+.togglebutton-2:hover {
+    color: #000;;
+    transition: 0.5s;
+}
+
+.togglebutton-2 ::before{
+    font-size: 2.5em;
+    color: #fff;
+    transition: 0.5s;
+    opacity:0;
+}
+
+.caixa-2.active::before{
+    opacity:1;
+}
+
+.togglebutton-2:hover::before {
+	color:white;
+	transition:0.5s;
+}
+.caixa-2 .conteudo-2 {
+    min-width: 400px;
+    padding:40px;
+    transform: scale(0);
+    transition: 0.5s;
+    transition-delay: 0.5s;
+    opacity:0;
+}
+
+.caixa-2.active .conteudo-2{
+    opacity:1;
+    transform: scale(1);
+    transition-delay: 0.8s;
+}
+.caixa-2 .conteudo-2 h2 {
+    padding-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.caixa-2 .conteudo-2 p {
+    font-weight: bold;
+    font-family: Helvetica;
+    color:#fff;
+}
+@media (max-width: 670px) {
+    
+  #menu {
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 70px;
+    right: 0px;
+    background: #e7e7e7;
+    transition: 0s;
+    z-index: 1000;
+    visibility: hidden;
+    overflow-y: hidden;
+  }
+  
+  #login a {
+      display: none;
+  }
+  #logo{
+      padding-left: 70px;
+  }
+  #header{
+      justify-content: space-between;
+  }
+
+  #nav.active #menu {
+    height: 40vh;
+    visibility: visible;
+    overflow-y: auto;
+    background-color: #024873;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    opacity: 0.9;
+    align-items: center;
+  }
+  #login {
+      display: none;
+  }
+  #nav.active #menu #login  {
+      display: block;
+  }
+  
+  #btn-mobile {
+    display: flex;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    gap: 0.5rem;
+  }
+  #hamburger {
+    border-top: 2px solid;
+    width: 20px;
+    color:white;
+    
+  }
+  #hamburger::after,
+  #hamburger::before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 2px;
+    
+    background: currentColor;
+    margin-top: 5px;
+    transition: 0.3s;
+    position: relative;
+  }
+  #nav.active #hamburger {
+    border-top-color: transparent;
+  }
+  #nav.active #hamburger::before {
+    transform: rotate(135deg);
+  }
+  #nav.active #hamburger::after {
+    transform: rotate(-135deg);
+    top: -7px;
+  }
+}

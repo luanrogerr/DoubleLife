@@ -1,0 +1,458 @@
+/* Estilo Principal da página */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.disclaimer {
+    display:none;
+}
+/* Cabeçalho principal da página. */
+header{
+    background-color: #024873;
+    padding: 20px 0;
+    box-shadow: 0px 0px 3px 1px rgb(0,0,0);
+    color: white;
+    font-weight: bold;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    
+}
+/* Classe da logo que aparece no cabeçalho. */
+#logo{
+    margin-top: -17px;
+    margin-left: 100px;
+    position: absolute;
+    width: 250px;
+    height: 60px;
+}
+/* Div da logo que aparece no cabeçalho. */
+.logo{
+    color: rgb(255, 255, 255);
+}
+.logo h2{
+    font-weight: normal;
+    font-size: 22px;
+}
+/* Menu do cabeçalho */
+.menu{
+    width: 80%;
+    text-align: right;
+}
+/* Menu do cabeçalho (LINKS) */
+.menu a{
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    text-decoration: none;
+    margin-right: 20px;
+    display:inline-block
+}
+/* Opção de quando pressionado do menu do cabeçalho (LINKS) */
+.menu a:after {
+  display:block;
+  content: '';
+  padding-bottom: 7px;
+  border : 1px;
+  border-bottom-style: solid; 
+  transform: scaleX(0);  
+  transition: transform 450ms ease-in-out;
+}
+.menu a:hover:after {
+transform: scaleX(1);
+}
+/* Parte do botão que gera o menu */
+.menu .btn-menu{
+    transition: all 300ms ease;
+    background-color: rgb(0, 110, 255);
+    display: inline-flex;
+    padding: 6px 12px;
+    color: #fff;
+    border-radius: 8px;
+}
+/* Parte do quando pressionado, botão que gera o menu */
+.menu .btn-menu:hover{
+    background-color: #123456;
+    color: white;
+    border: none;
+    display: inline-flex;
+    transition-duration: 1s;
+}
+.menu .btn-menu:before {
+  width: 0;
+  height: 0;
+}
+
+.menu .btn-menu:hover:after {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.menu .btn-menu:hover:before {
+  width: 100%;
+  height: 100%;
+  background-color: #111;
+}
+/* Parte do menu Mobile.- (Impede que haja colisão dos dois tipos de menu) */
+.menu-mobile{
+    display: none;
+}
+/*Botãozinhos que aparecem com opções semelhantes a do cabeçalho mas estão no body*/
+.section{
+    margin-left: 50%;
+    transform: translateX(-38%);
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 200px;
+}
+/*Imagem principal / Parte principal do site */
+#main-indexc{
+    background-image: url(/imagens/pexels-josh-willink-286625.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 500px;
+    padding: 70px 0;
+    
+}
+#main-indexa{
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 500px;
+    padding: 70px 0;
+    
+}
+/* Botãozinhos que citei anteriormente mas individualmente.*/
+.section-single{
+    background-color: white;
+    width: 23%;
+    padding : 3vh;
+    margin: 0 1% 0 0.7%;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+}
+/* Animação ao clicar nos botãozinhos que citei anteriormente individualmente.*/
+.section-single:hover{ 
+    background-color : #2b4965;   
+    transition-duration: 0.5s;
+}
+.section-single:hover > #section_color{ 
+    color : #fff;
+}
+#section_color {
+    transition-duration: 0.5s;
+}
+#section_color:hover {
+    color : #fff;
+}
+/* Icone dos botãozinhos*/
+.section-single i{
+    color: #123456;
+    font-size: 23px;
+}
+/* H2 dos botãozinhos */
+.section-single h2{
+    color: #123456;
+    margin: 10px 0;
+    font-size: 17px;
+}
+/* Parágrafo dos botãozinhos */
+.section-single p{
+    font-size: 14px;
+    color: grey;
+    line-height: 30px;
+}
+section.sobre{
+    padding: 80px 0 40px 0;
+}
+section.sobre{
+    padding: 20px;
+}
+.container{
+    width: 100%;
+    height: 400px;
+}
+
+.doacoes{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 40px 100px;
+    justify-content: space-around;
+    vertical-align: center;
+    
+}
+#doacoes-img{
+    width: 50%;
+    background-image: url(/imagens/pexels-samer-daboul-1815257.jpg);
+    background-size: cover;
+    background-position: center center;
+    border-radius: 40px;
+    
+}
+#doacoes-info{
+    width: 40%;
+    text-align: center;
+    padding: 10px 30px 30px 30px;
+    text-align: justify;
+    border: solid 1px #024873;
+    border-radius: 40px;
+}
+#doacoes-info h2{
+    color: #024873;
+    padding: 10px;
+    text-align: center;
+}
+#doacoes-info button{
+    float: right;
+    transition: all 300ms ease;
+    background-color: #024873;
+    padding: 8px 16px;
+    color: #fff;
+    border: none;
+    border-radius: 100px;
+    text-decoration: none;
+    cursor: pointer;
+    margin-top: 5px;
+}
+#doacoes-info button a{
+    text-decoration: none;
+    color: white;
+}
+#doacoes-info button:hover{
+    background-color: #013454;
+}
+.chamada-sobre{
+    width: 100%;
+    text-align: center;
+}
+.chamada-sobre h2{
+    color: #123456;
+}
+.chamada-sobre p{
+    font-size: 14px;
+    color: gray;
+    margin: 10px 0;
+}
+.conteudo-sobre{
+    display: flex;
+    
+    
+}
+.conteudo-sobre p{
+    margin: 0 20px;
+    padding-top: 10px;
+}
+
+.footer{
+    padding: 0 0 20px 0;
+    background-color: white;
+    margin-top: -990px;
+}
+
+.footer .social{
+    text-align: center;
+    padding-bottom: 25px;
+    color: #1d4c7c;
+}
+.footer .social a{
+    font-size: 24px;
+    color: inherit;
+    border: 1px solid rgb(177, 177, 177);
+    border-radius: 40px;
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    display: inline-block;
+    text-align: center;
+    margin: 0 8px;
+    opacity: 1;
+}
+.footer .social a:hover {
+    color: red;
+}
+.footer ul{
+    margin-top: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0;
+    text-align: center;
+}
+.footer ul a{
+    color: #063666;
+    text-decoration: none;
+}
+.footer ul a:hover{
+    color: #0b1e33;
+}
+.footer ul li{
+    display: inline-block;
+    padding: 0 15px;
+    
+}
+
+
+.footer .copyright{
+    margin-top: 15px;
+    text-align: center;
+    font-size: 13px;
+    color: #aaa;
+}
+
+
+.footer-admin{
+    margin-top:10px;
+    padding: 13px;
+    background-color: #2b4965;
+}
+
+.footer-admin .social{
+    text-align: center;
+    padding-bottom: 25px;
+    color: white;
+}
+.footer-admin .social a{
+    font-size: 24px;
+    color: inherit;
+    border: 1px solid rgb(177, 177, 177);
+    border-radius: 40px;
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    display: inline-block;
+    text-align: center;
+    margin: 0 8px;
+    opacity: 1;
+}
+.footer-admin .social a:hover {
+    color: white;
+}
+.footer-admin ul{
+    margin-top: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0;
+    text-align: center;
+}
+.footer-admin ul a{
+    color: white;
+    text-decoration: none;
+}
+.footer-admin ul a:hover{
+    color: white;
+}
+.footer-admin ul li{
+    display: inline-block;
+    padding: 0 15px;
+    
+}
+.footer-admin ul li{
+    padding: 0 15px;
+    
+}
+#list:hover {
+    border-bottom: 1px;
+    padding : 10px;
+}
+
+
+.footer-admin .copyright{
+    margin-top: 15px;
+    text-align: center;
+    font-size: 13px;
+    color: #aaa;
+}
+#container-title-admin{
+    position: absolute;
+    color: #2b4965;
+    font-size: 19px;
+    margin-left: 50%;
+    margin-top: 80px;
+    transform: translateX(-50%);
+}
+
+
+@media screen and (max-width: 768px){
+    
+/* Versão - Mobile */
+    .logo img{
+        display: none;
+    }
+    .menu{
+        display: none;
+    }
+    .menu-mobile{
+        display: block;
+        text-align: right;
+        margin-right: 20px;
+    }
+    
+    .section{
+        margin-top: 30px;
+        padding-top: 0px;
+        
+    }
+    .section-single{
+        width: 100%;
+        margin-right: 20px ;
+        margin-bottom: 15px;
+    }
+    .conteudo-sobre{
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    #container-title-admin{
+    display:none;
+    transform: translateX(-50%);
+    }
+    
+}
+   
+
+
+/* Página de Gráficos */   
+
+#main-graf{
+    background-color: #FFF;
+}
+
+#graf-servico{
+    font-size: 25px; 
+    text-decoration: none;
+    color:  #123456;
+    
+}
+
+.icon-graf1{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 50px 100px 50px 100px;
+}
+
+.graf-1{
+    border: 3px solid #123456;
+    padding: 5px;
+    margin: 100px 0px 0px 20px;
+    border-radius: 15px;
+    position: absolute;
+    width: 50%;
+    max-height: 90%;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2), 0 8px 22px 0 rgba(0, 0, 0, 0.19);
+    
+}
+#title-graf1{
+    text-align: center;
+}
+    

@@ -1,0 +1,44 @@
+<html lang="pt-br">
+<head>
+    <link rel="shortcut icon" href="/imagens/Logo_Cubo_para_empresa_de_Arquitetura_Design_e_Engenharia_2.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contato</title>
+    <link rel="stylesheet" href="/estilos/form.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+
+    <div class="container" >
+            <div class="second-column" style = "background-color: white; padding: 50px 10px 50px 10px ">
+                <h2 class="title title-second">Contato</h2>
+                <p class="description description-second">Entre em contato com os nossos administradores e funcionários! </p>
+                <form class="form" method="post" action="contato.php">
+                    <label class="label-input" for="">
+                        <i class="far fa-solid fa-clipboard icon-modify"></i>
+                        <input type="text" name="nome" placeholder="Nome " required class="form-input"><br><br><span style="display: none;" name="nomeErr">* O campo nome é requerido.</span>
+                    </label>
+                
+                    <label class="label-input" for="">
+                        <i class="far fa-envelope icon-modify"></i>
+                        <input type="email" name="email" placeholder="Email " required class="form-input"><br><br><span style="display: none;" name="emailErr">* O campo email é requerido.</span>
+                    </label>
+                    
+                    <label class="label-input" for="">
+                        <i class="fas fa-lock icon-modify"></i>
+                        <input type="text" name="assunto" placeholder="Assunto " required class="form-input"><br><br><span style="display: none;" name="assuntoErr">* O campo assunto é requerido.</span>
+                    </label>
+                    
+                    <label class="label-input" for="">
+                    
+                        <textarea name="mensagem" placeholder="Mensagem a enviar..." class="form-input" id="form-msg"></textarea><span style="display:none;" name="mensagemErr">* O campo mensagem é requerido.</span>
+                    </label>
+                    
+                    <button type="submit" value="Enviar" id="btn-logar" class="btn btn-second">Enviar</button>
+
+                </form>
+            </div><!-- second column -->
+        </div><!-- first content -->
+    </body>
+</html>

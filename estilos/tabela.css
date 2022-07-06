@@ -1,0 +1,76 @@
+/* General da página + Import da fonte */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.disclaimer {
+    display:none;
+}
+
+table, th, td { 
+    padding: 10px;
+    font-family: serif;
+    border : 2px solid black;
+    border-collapse : collapse;
+    font-size: 15px;
+}
+th {
+    font-size: 16px;
+    background-color: #024873;
+    color: white;
+}
+/* Corpo */
+body {
+background-color: white;
+}
+
+h1, h2, h3{
+
+font-family: arial;
+padding-bottom: 10px;
+text-decoration: none;
+margin:0;
+}
+
+p {
+font-family: 'EB Garamond', serif;
+margin-left : 25px;
+margin-right : 25px;
+}
+.container {
+margin-top: 30px;
+width: 50%;
+}
+.Pesquisa {
+    padding: 10px;
+}
+.Pesquisa label {
+    font-family: serif;
+    font-weight: bold;
+}
+.Pesquisa input {
+    padding: 10px;
+
+}
+.Pesquisa input:focus {
+    text-decoration: none;
+    border: 2px solid black
+}
+
+.pagination {
+    padding-top: 10px;
+}
+.pagination a {
+    font-size: 10px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    border: 1px solid black;
+    padding: 5px;
+}
+.pagination a:hover {
+    background-color: #024873;
+    color: white;
+}

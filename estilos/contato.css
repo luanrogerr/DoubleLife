@@ -1,0 +1,66 @@
+.disclaimer {
+    display:none;
+}
+body {
+    background-image: url(/imagens/fundocadastro.png);
+    background-size: 120%;
+    background-size: cover;
+    background-size: no-repeat;
+    background-attachment: fixed;
+    
+}
+#container-contato{
+    background-color: white;
+    padding : 50px;
+    border : 1px solid;
+    background-color: #ffffff;
+    color: #024873;
+    position: absolute;
+    margin-left: 50%;
+    margin-top: 10px;
+    transform: translate(-50%);
+    font-family : "Calibri";
+    font-size: 20px;
+    border-radius: 50px;
+}
+.form-itens{
+    width: 500px;
+    height: 50px;
+    font-weight: bold;
+}
+#input-msg{
+    height: 200px;
+}
+#btn-enviar{
+    margin-top: 15px;
+    border: none;
+    background-color: rgb(194, 189, 189);
+    border-radius: 30px;
+}
+#btn-enviar:hover{
+    color : #ffffff;
+    background-color: #024873;
+    transition-duration: 1.0s;
+
+}
+#title-contato{
+    top: 50px;
+    width: 207px;
+    margin-left: 50%;
+    transform: translate(-50%, -50%);
+}
+.form-input{
+    border-style: hidden;
+    border-bottom: 1px solid;
+    width: 500px;
+    height: 50px;
+    font-size: 18px;
+}
+.form-input:focus{
+    border: 0.1px solid #024873;
+    font-size: 18px;
+}
+#form-msg{
+    border-style: solid;
+    height: 200px;
+}

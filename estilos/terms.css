@@ -1,0 +1,121 @@
+/* General da página + Import da fonte */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.disclaimer {
+    display:none;
+}
+
+
+/* Corpo */
+body {
+background-color: white;
+}
+
+/* H3 - H2, juntos */
+h2, h3{
+font-family: 'EB Garamond', serif;
+text-align : Center;
+padding-bottom: 10px;
+text-decoration: none;
+
+margin:0;
+}
+/* Classe responsável para o hover funcionar */
+h3.funcionar:after {
+  display:block;
+  content: '';
+  border-bottom: solid 1px;  
+  padding-bottom: 5px;
+  transform: scaleX(0);  
+  transition: transform 250ms ease-in-out;
+}
+h3.funcionar:hover:after {
+    transform: scaleX(1);
+}
+h3.funcionar#fromLeft:after{
+    transform-origin:  0% 50%;
+}
+/* Parágrafo */
+p {
+font-family: 'EB Garamond', serif;
+margin-left : 25px;
+margin-right : 25px;
+}
+/* Section dos terms */
+.terms-section {
+    text-align : center;
+    background-color: white;
+    margin-top: 125px;
+    margin-left: 40vh;
+    margin-right: 40vh;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+}
+/* Container dos termos */
+#terms-container {
+    text-align: left;
+    color: black;
+    text-decoration: none;
+}
+/* Principal dos terms */
+.terms{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 40px 100px;
+    justify-content: space-around;
+    vertical-align: center;
+}
+/* Parte da esquerda dos terms */
+#terms-a{
+    text-decoration: none;
+    float: right;
+    width: 10%;
+    background-size: cover;
+    background-position: center center;
+    color: black;
+    padding-right: 20px;
+    border-right: 1px solid black;
+}
+/* Parte da direita dos terms */
+#terms-b{ 
+    padding-right: 20px;
+    float: left;
+    width: 90%;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 40px;
+}
+
+@media screen and (max-width: 768px) {
+    
+    .terms {
+        font-size: 15px;
+        flex-wrap: wrap;
+    }
+    #terms-a{
+        text-decoration: none;
+        background-size: cover;
+        background-position: center center;
+        color: black;
+        border: none;
+        width: 50%;
+        padding-bottom: 50px;
+        border : 1px;
+        
+    }
+    /* Parte da direita dos terms */
+    
+    #terms-b{ 
+        width: 100%;
+        background-size: cover;
+        background-position: center center;
+        
+    }
+}
